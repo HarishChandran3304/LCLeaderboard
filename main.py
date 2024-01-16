@@ -24,7 +24,7 @@ if not credentials or not credentials.valid:
     with open("token.json", "w") as token:
         token.write(credentials.to_json())
 
-TOTAL = 18
+TOTAL = 19
 
 
 def get_values(total):
@@ -61,6 +61,7 @@ def update_values(values):
         handle = values[i][1]
         values[i][2] = "Yes" if check_daily(handle) else "No"
         values[i][3] = get_total(handle)
+        values[i][1] = f'=HYPERLINK("https://www.leetcode.com/{handle}", "{handle}")'
         print(values[i])
 
     return values
