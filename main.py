@@ -24,7 +24,7 @@ if not credentials or not credentials.valid:
     with open("token.json", "w") as token:
         token.write(credentials.to_json())
 
-TOTAL = 19
+TOTAL = 20
 
 
 def get_values(total):
